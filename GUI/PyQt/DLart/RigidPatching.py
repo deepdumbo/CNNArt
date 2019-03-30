@@ -1,7 +1,11 @@
 import numpy as np
 import math
 
+<<<<<<< HEAD:GUI/PyQt/DLart/RigidPatching.py
 from utils.label import Label
+=======
+from Label import Label
+>>>>>>> dff55db32120e04e389962791c520af3c51e68f3:GUI/PyQt/utilsGUI/RigidPatching.py
 
 #########################################################################################################################################
 #Function: fRigidPatching                                                                                                               #
