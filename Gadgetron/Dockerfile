@@ -24,5 +24,5 @@ RUN pip install pydicom dicom-numpy scikit-learn pyyaml h5py \
     && mkdir /opt/data \
     && cp /opt/CNNArt/Gadgetron/cnnart.xml /usr/local/share/gadgetron/config
 
-COPY cnnart_trainednets /opt/CNNArt
+COPY ../../cnnart_trainednets /opt/CNNArt
 WORKDIR /opt/data
