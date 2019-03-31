@@ -34,8 +34,8 @@ from keras.regularizers import l2  # , activity_l2
 
 from keras.optimizers import SGD
 from networks.multiclass.CNN2D.SENets.deep_residual_learning_blocks import *
-from GUI.PyQt.DLArt_GUI.dlart import DeepLearningArtApp
-from GUI.PyQt.utilsGUI.image_preprocessing import ImageDataGenerator
+# from GUI.PyQt.DLArt_GUI.dlart import DeepLearningArtApp
+# from GUI.PyQt.utilsGUI.image_preprocessing import ImageDataGenerator
 from matplotlib import pyplot as plt
 
 import scipy.io as sio
