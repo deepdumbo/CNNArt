@@ -20,7 +20,8 @@ RUN pip install pydicom dicom-numpy scikit-learn pyyaml h5py \
     # && conda install -c clinicalgraphics gdcm \
     && cd /opt \ 
     && git clone https://github.com/thomaskuestner/CNNArt.git \
-    && git checkout motion_correction_Yang_Liu \
+    && cd CNNArt \
+    && git checkout motion_correct_Yang_Liu \
     && mkdir /opt/data \
     && cp /opt/CNNArt/Gadgetron/cnnart.xml /usr/local/share/gadgetron/config
 
