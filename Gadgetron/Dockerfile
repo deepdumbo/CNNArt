@@ -13,7 +13,8 @@ FROM gadgetron/ubuntu_1804_cuda92_cudnn7:latest
 #     && rm -r /usr/src/redis \
 #     && apt-get purge -y --auto-remove $buildDeps
 
-RUN pip install --upgrade pip \
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2 \
+    && pip install --upgrade pip \
     && pip install --upgrade pydicom dicom-numpy scikit-learn pyyaml h5py tensorflow keras matplotlib\
     # && wget -d https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
     # && ./Miniconda3-latest-Linux-x86_64.sh \

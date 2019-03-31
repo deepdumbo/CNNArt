@@ -20,7 +20,7 @@ class Py_demo(Gadget):
         result = resFCN_predict(X_test=np.squeeze(data), 
                     sModelPath='/opt/CNNArt/cnnart_trainednets/motion/FCN/cnn_training_info.json', 
                     sOutPath='/opt/Data/Output')
-        self.put_next(head, data)
+        self.put_next(result, data)
         return 0
 
 
