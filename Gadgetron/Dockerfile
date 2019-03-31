@@ -25,5 +25,11 @@ RUN pip install pydicom dicom-numpy scikit-learn pyyaml h5py \
     && mkdir /opt/data \
     && cp /opt/CNNArt/Gadgetron/cnnart.xml /usr/local/share/gadgetron/config
 
-COPY ../../cnnart_trainednets /opt/CNNArt
+# manual move cnnart_trainednets to /opt/CNNArt
 WORKDIR /opt/data
+
+# cd to work direction
+# $ docker run -t --name gt1 --detach --volume $(pwd):/opt/data cnnart_gadgetron
+# $ docker exec -ti gt1 /bin/bash
+# in docker: $ gadgetron_ismrmrd_client -f testdata.h5 -o out.h5 -c cnnart.xml
+

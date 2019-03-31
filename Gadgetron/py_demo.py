@@ -2,7 +2,7 @@ import numpy as np
 import time
 import pickle
 import sys
-sys.path.insert(0, '/opt/CNNArt')
+sys.path.insert(0, '/opt')
 
 from gadgetron import Gadget
 from CNNArt.networks.FullyConvolutionalNetworks.motion.3D_VResFCN_Upsampling_final.fPredict as resFCN_predict
