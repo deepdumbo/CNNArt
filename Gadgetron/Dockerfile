@@ -13,11 +13,11 @@ FROM gadgetron/ubuntu_1804_cuda92_cudnn7:latest
 #     && rm -r /usr/src/redis \
 #     && apt-get purge -y --auto-remove $buildDeps
 
-RUN pip install pydicom dicom-numpy scikit-learn yaml h5py \
-    && wget -0 miniconda3.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
-    && ./miniconda3.sh \
-    && conda install theano pygpu -y \
-    && conda install -c clinicalgraphics gdcm \
+RUN pip install pydicom dicom-numpy scikit-learn pyyaml h5py \
+    # && wget -d https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+    # && ./Miniconda3-latest-Linux-x86_64.sh \
+    # && conda install theano pygpu -y \
+    # && conda install -c clinicalgraphics gdcm \
     && cd /opt \ 
     && git clone https://github.com/thomaskuestner/CNNArt.git \
     && mkdir /opt/data \
