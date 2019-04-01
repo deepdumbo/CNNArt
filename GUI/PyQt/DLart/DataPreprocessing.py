@@ -3,10 +3,6 @@ import pydicom as dicom
 import dicom_numpy
 import os
 import shelve
-<<<<<<< HEAD:GUI/PyQt/DLart/DataPreprocessing.py
-=======
-from RigidPatching import *
->>>>>>> dff55db32120e04e389962791c520af3c51e68f3:GUI/PyQt/utilsGUI/DataPreprocessing.py
 import cProfile
 import json
 from matplotlib import path
