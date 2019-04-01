@@ -1,6 +1,7 @@
 import os
 #os.environ["CUDA_DEVICE_ORDER"]="0000:02:00.0"
-
+import sys
+sys.path += ['/opt', '/opt/CNNArt']
 
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices)
@@ -35,7 +36,7 @@ from keras.regularizers import l2  # , activity_l2
 
 from keras.optimizers import SGD
 from networks.multiclass.SENets.deep_residual_learning_blocks import *
-from DeepLearningArt.DLArt_GUI.dlart import DeepLearningArtApp
+# from DeepLearningArt.DLArt_GUI.dlart import DeepLearningArtApp  # now in GUI.PyQt.DLArt_GUI
 from utils.image_preprocessing import ImageDataGenerator
 from matplotlib import pyplot as plt
 
