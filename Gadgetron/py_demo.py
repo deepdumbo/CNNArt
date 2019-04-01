@@ -5,7 +5,7 @@ import sys
 sys.path.insert(0, '/opt')
 
 from gadgetron import Gadget
-from CNNArt.networks.FullyConvolutionalNetworks.motion.VResFCN_3D_Upsampling_final_Motion_Binary.py import fPredict as resFCN_predict
+from CNNArt.networks.FullyConvolutionalNetworks.motion.VResFCN_3D_Upsampling_final_Motion_Binary import fPredict as resFCN_predict
 
 
 class Py_demo(Gadget):
