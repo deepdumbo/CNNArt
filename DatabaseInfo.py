@@ -14,7 +14,7 @@ class DatabaseInfo:
     lPats = ''
     lImgData = '' # list of imaging data
 
-    def __init__(self, sDatabase = 'MRPhysics', sSubDirs = ['newProtocol','dicom_sorted','testout'], sDatabaseRootPath = '/med_data/ImageSimilarity/Databases', *args):
+    def __init__(self, sDatabase = 'MRPhysics', sSubDirs = ['newProtocol','dicom_sorted','testout'], sDatabaseRootPath = '/home/so2liu/Documents/Gadgetron_CNNArt/', *args):
         self.sDatabaseRootPath = sDatabaseRootPath
         self.sDatabase = sDatabase
         self.sSubDirs = sSubDirs # name of subdirectory in [database, patient]

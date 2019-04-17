@@ -18,6 +18,7 @@ import h5py
 import scipy.io as sio              # I/O
 import os.path                      # operating system
 import argparse
+import yaml
 
 # utils
 from DatabaseInfo import DatabaseInfo
@@ -36,8 +37,7 @@ from correction.networks.motion import *
 from networks.FullyConvolutionalNetworks.motion import *
 
 # VAE correction network
-import correction.main_correction as correction
-
+# import correction.main_correction as correction  #  can't import, don't know why
 # multi-scale
 from utils.calculateInputOfPath2 import fcalculateInputOfPath2
 from networks.multiscale.runMS import frunCNN_MS
@@ -422,6 +422,7 @@ def fTrainArtDetection():
 def fPredictArtDetection():
     # prediction
     sNetworktype = cfg['network'].split("_")
+    sPredictModel = cfg['sPredictModel']
     if len(sPredictModel) == 0:
         sPredictModel = cfg['selectedDatabase']['bestmodel'][sNetworktype[2]]
 
@@ -483,7 +484,7 @@ if __name__ == "__main__": # for command line call
     # fDeprecatedMain(args)
 
     # parse input
-    cfg = fParseConfig(args.config[0])
+    cfg = fParseConfig(args.config)
 
     lTrain = cfg['lTrain']  # training or prediction
     lSave = cfg['lSave']  # save intermediate test, training sets
